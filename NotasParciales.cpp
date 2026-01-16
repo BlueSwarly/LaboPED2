@@ -35,3 +35,4 @@ void ListaEnlazada::imprimirLista(void){
         actual = actual->sig;
     }
 }
+
