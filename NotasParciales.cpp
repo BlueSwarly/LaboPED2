@@ -25,3 +25,14 @@ class ListaEnlazada{
 
 };
 
+void ListaEnlazada::imprimirLista(void){
+
+    nodo* actual = head;
+
+    while(actual != nullptr)
+    {
+        cout << "Nombre: "<< actual->dato.nombre<< endl;
+        actual = actual->sig;
+    }
+}
+
