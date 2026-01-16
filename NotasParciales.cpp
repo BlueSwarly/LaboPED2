@@ -1,27 +1,15 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
-
-struct Estudiante{
-    string nombre;
-    int NotaFinal;
-};
-
-struct nodo{
-    Estudiante dato;
-    nodo *sig;
-};
-
-class ListaEnlazada{
+class Estudiante{
     private:
-
-    nodo *head;
-
+    string nombre;
+    float notaf;
     public:
-    ListaEnlazada();
-    void AgregarEstudiante(void);
-    float calcularPromedioRecursivo(void);
-    void imprimirLista(void);
-
+    Estudiante estudiantes(string n, float no){
+        nombre =n;
+        notaf =no;
+    }   
+    void imprimir()
+{ cout<<nombre<<"su nota final es "<<notaf<<endl;
+}
 };
-
