@@ -2,9 +2,18 @@
 
 using namespace std;
 
-struct Estudiante{
+class Estudiante{
+    public:
     string nombre;
-    int NotaFinal;
+    float notaf;
+    
+    Estudiante estudiantes(string n, float no){
+        nombre =n;
+        notaf =no;
+    }   
+    void imprimir()
+{ cout<<nombre<<"su nota final es "<<notaf<<endl;
+}
 };
 
 struct nodo{
@@ -36,3 +45,28 @@ void ListaEnlazada::imprimirLista(void){
     }
 }
 
+int main() {
+    ListaEnlazada lista;
+    int opcion;
+
+    do {
+        cout << "1. Agregar estudiante" << endl
+            << "2. Listas de estudiantes" << endl
+            << "3. Promedio de notas" << endl
+            << "4. Salir" << endl;
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1:
+            lista.AgregarEstudiante();
+            break;
+        case 2:
+            lista.imprimirLista();
+            break;
+        case 3:
+            lista.calcularPromedioRecursivo();
+            break;
+        }
+    } while (opcion != 4);
+    return 0;
+}
