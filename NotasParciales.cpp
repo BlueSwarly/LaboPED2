@@ -5,7 +5,7 @@ class Estudiante{
     string nombre;
     float notaf;
     public:
-    Estudiante estudiantes(string n, float no){
+    Estudiante (string n, float no){
         nombre =n;
         notaf =no;
     }   
